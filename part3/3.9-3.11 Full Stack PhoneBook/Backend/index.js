@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const cors = require('cors');
+const path = require('path');
+
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static('dist'));
 
 morgan.token('body', (req) => {
   return req.method === 'POST' ? JSON.stringify(req.body) : '';
@@ -77,6 +80,11 @@ app.delete('/api/persons/:id', (req, res) => {
   const id = req.params.id;
   persons = persons.filter(person => person.id !== id);
   res.status(204).end(); // 204 No Content (successful, but no body)
+});
+
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
 
 
