@@ -1,6 +1,6 @@
 # Full Stack Phonebook – Backend & Deployed Frontend 🎉
 
-This is my Full Stack Phonebook project from Part 3 of the Full Stack Open course. It's a Node.js + Express backend with a React frontend — all bundled up and deployed like a proper little web app.
+This is my Full Stack Phonebook project from Part 3 of the Full Stack Open course. It's a Node.js + Express backend with a React frontend
 
 
 👉 [Check it out on Render](https://full-stack-phonebook-r7l0.onrender.com)
