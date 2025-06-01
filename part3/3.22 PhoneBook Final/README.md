@@ -24,4 +24,4 @@ You'll need **two terminals** for dev mode:
 
 The Part 3 of Full-Stack-MOOC is now complete and the phonebook is fully operational. However, I am using the free version of Render and website may be unavailable often. Therefore, I have added screenshot of my website here:
 
-![Phonebook App Screenshot](./s.png)
+![Phonebook App Screenshot](./screenshot.png)
