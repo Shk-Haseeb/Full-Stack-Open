@@ -14,4 +14,4 @@ To explore the solutions:
 
 - Navigate to the desired part directory.
 - Review the source code and notes provided.
-- Run locally (if desired) by following any setup instructions within the folder’s README.md.
+- Run locally by following any setup instructions within the folder’s README.md.
