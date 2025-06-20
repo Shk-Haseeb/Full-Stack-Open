@@ -1,6 +1,6 @@
 # Full-Stack Open MOOC – Solutions Repository
 Welcome to my solutions repository for the Full-Stack Open course.
-This course focuses on modern JavaScript-based web development, covering a full-stack skillset from frontend to backend using contemporary technologies.
+This course focuses on modern JavaScript-based web development, covering a full-stack skillset from front-end to back-end using popular technologies.
 
 ### Repository Structure
 All course parts are organized into separate folders for clarity and modularity. Each part folder contains:
