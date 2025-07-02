@@ -58,14 +58,14 @@ app.post('/api/persons', (req, res, next) => {
     .then(savedPerson => {
       res.json(savedPerson)
     })
-    .catch(error => next(error))  // ADD THIS LINE
+    .catch(error => next(error)) 
 })
 
 
 app.delete('/api/persons/:id', (req, res, next) => {
   Person.findByIdAndDelete(req.params.id)
     .then(() => res.status(204).end())
-    .catch(error => next(error))  // Pass error to middleware
+    .catch(error => next(error))
 })
 
 app.put('/api/persons/:id', (req, res, next) => {
