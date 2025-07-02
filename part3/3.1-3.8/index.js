@@ -47,18 +47,15 @@ app.get('/api/persons/:id', (req, res) => {
 app.post('/api/persons', (req, res) => {
   const body = req.body;
 
-  // Check for missing fields
   if (!body.name || !body.number) {
     return res.status(400).json({ error: 'name or number is missing' });
   }
 
-  // Check for duplicate names
   const nameExists = persons.some(person => person.name === body.name);
   if (nameExists) {
     return res.status(400).json({ error: 'name must be unique' });
   }
 
-  // Create new person
   const newPerson = {
     id: Math.floor(Math.random() * 1000000).toString(),
     name: body.name,
@@ -74,7 +71,7 @@ app.post('/api/persons', (req, res) => {
 app.delete('/api/persons/:id', (req, res) => {
   const id = req.params.id;
   persons = persons.filter(person => person.id !== id);
-  res.status(204).end(); // 204 No Content (successful, but no body)
+  res.status(204).end(); // 204 checking???
 });
 
 
