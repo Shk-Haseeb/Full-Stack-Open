@@ -1,3 +1,3 @@
-- 7.1-7.6 exercises are in their seperate folder. 
-- 7.7-7.8 exercises are in their same respective folder
-- 7.9-7.10 exercises are in their respective folder
+- 7.1-7.6 exercises are in their seperate folder 
+- 7.7 exercise is in its respective folder
+- 7.8 exercise is in its respective folder
