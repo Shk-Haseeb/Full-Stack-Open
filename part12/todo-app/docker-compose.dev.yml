@@ -2,42 +2,28 @@ version: "3.8"
 
 services:
   frontend:
-    image: hello-front-dev
+    build:
+      context: ./frontend
+      dockerfile: dev.Dockerfile
     container_name: frontend
+    volumes:
+      - ./frontend:/usr/src/app
     ports:
       - 5173:5173
-    volumes:
-      - ./todo-frontend:/usr/src/app
     working_dir: /usr/src/app
     command: npm run dev -- --host
 
   backend:
-    image: hello-back-dev
-    container_name: backend
     build:
-      context: ./todo-backend
+      context: ./backend
       dockerfile: dev.Dockerfile
+    container_name: backend
     volumes:
-      - ./todo-backend:/usr/src/app
+      - ./backend:/usr/src/app
+    ports:
+      - 3001:3001
     working_dir: /usr/src/app
     command: npm run dev
-    ports:
-      - 3000:3000
-    environment:
-      - MONGO_URL=mongodb://mongo:27017/the_database
-      - REDIS_URL=redis://redis:6379
-
-  mongo:
-    image: mongo
-    container_name: mongo
-    ports:
-      - 27017:27017
-
-  redis:
-    image: redis
-    container_name: redis
-    ports:
-      - 6379:6379
 
   nginx:
     image: nginx:1.20.1
